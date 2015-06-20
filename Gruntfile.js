@@ -1,61 +1,77 @@
 module.exports = function (grunt) {
-
     grunt.initConfig({
 
-        // live browser injection
         browserSync: {
-            bsFiles: {
-                src : 'css/site.css'
-            },
-            options: {
-                watchTask: true
-            }
+          bsFiles: {
+            src: ['css/*.css', '*.php', '*.html']
+          },
+          options: {
+              watchTask: true, // < VERY important
+              server: {
+                baseDir: './'   
+              }
+//              startPath: "/mcguigan/",
+//              browser: "safari"
+          }
         },
 
         // watch changes to less files
         watch: {
-            styles: {
-                files: ["less/**/*"],
-                tasks: ["less"]
-            },
-            options: {
-                spawn: false,
-            },
+              sass: {
+                files: "scss/*.scss",
+                tasks: "sass"
+              },
+//            prefixes: {
+//                files: ["scss/**/*"],
+//                tasks: ["autoprefixer"]
+//            }
         },
 
-        // compile set less files
-        less: {
-            development: {
-                options: {
-                    paths: ["less"],
-                    sourceMap: true,
-                    sourceMapFilename: 'css/site.css.map',
-                    sourceMapURL: 'css/site.css.map',
-                    compress: true
-                },
-                files: {
-                    "css/site.css": ["less/*.less", "!less/_*.less"]
-                }
+        sass: {
+          dev: {
+            files: [{
+              expand: true,
+              cwd: 'scss',
+              src: 'styles.scss',
+              dest: 'css',
+              ext: '.css'
+            }]
+          }
+        },
+
+        // Note: for grunt-cssmin options, check out clean-css options https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-programmatically
+
+        cssmin: {
+          target: {
+            options:{
+              keepSpecialComments: 0,
+              // relativeTo: './',
+              // root: './'
+              // noAdvanced: true
+            },
+            files: {
+              'css/site.min.css': ['css/site.css']
             }
-        }
+          }
+        },
+
+        autoprefixer: {
+            single_file: {
+              options: {
+                // Target-specific options go here.
+              },
+              src: 'css/*.css'
+            },
+        },
 
     });
 
     // Load tasks so we can use them
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks("grunt-autoprefixer");
 
-    // the default task will show the usage
-    grunt.registerTask("default", "Prints usage", function () {
-        grunt.log.writeln("");
-        grunt.log.writeln("Building Base");
-        grunt.log.writeln("------------------------");
-        grunt.log.writeln("");
-        grunt.log.writeln("* run 'grunt --help' to get an overview of all commands.");
-        grunt.log.writeln("* run 'grunt dev' to start watching and compiling LESS changes for development.");
-    });
 
-    grunt.registerTask("dev", ["less", "browserSync", "watch"]);
-
+    grunt.registerTask("default", ["browserSync", "watch"]);
 };

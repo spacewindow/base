@@ -6,30 +6,35 @@
 // Grid Variables
 // -------------------
 
-@containerWidth: 768px;
-@columnCount:    12;
-@gutterRatio:    25%;
+$containerWidth: 768px;
+$columnCount:    12;
+$gutterRatio:    25%;
 
 
 // Type Variables
 // -------------------
 
-@fontSize: 14px;
-@lineHeight: 140%;
+$fontSize: 14px;
+$lineHeight: 140%;
 
 
 // Base Styles
 // -------------------
 
-@import "_variables.less"; // site variables
-@import "_mixins.less"; // grid and mixins	
+@import "_variables"; // site variables
+@import "_mixins"; // grid and mixins	
 
 @media (min-width: 768px) and (max-width: 959px) {
 	
-	@import "_layout.less";
+	@import "_layout";
 	
 
 	// Custom Styles
 	// -------------------
+    
+    .tablet{
+        color: black;    
+    }
+
 
 }

@@ -7,30 +7,31 @@
 // -------------------
 
 body {
-	font-size: @fontSize;
-	line-height: @lineHeight;
+	font-size: $fontSize;
+	line-height: $lineHeight;
 }
 h1, h2, h3, h4, h5, h6 {
-	line-height: @lineHeight;
+	line-height: $lineHeight;
 }
 
 .container { // kept for utility
-	.container();
+	@include container();
+    @extend .group;
 	margin: 0 auto;
 }
 
 header {
-	.column(12);
+	@include column(12);
 }
 
 article {
-	.column(8);
+	@include column(9);
 }
 
 aside {
-	.column(4);
+	@include column(3);
 }
 
 footer {
-	.column(12);
+	@include column(12);
 }

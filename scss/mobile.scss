@@ -6,30 +6,34 @@
 // Grid Variables
 // -------------------
 
-@containerWidth: 100%;
-@columnCount:    1;
-@gutterRatio:    10%;
+$containerWidth: 100%;
+$columnCount:    1;
+$gutterRatio:    10%;
 
 
 // Type Variables
 // -------------------
 
-@fontSize: 16px;
-@lineHeight: 140%;
+$fontSize: 16px;
+$lineHeight: 140%;
 
 
 // Base Styles
 // -------------------
 
-@import "_variables.less"; // site variables
-@import "_mixins.less"; // grid and mixins
+@import "_variables"; // site variables
+@import "_mixins"; // grid and mixins
 
 @media (max-width: 767px) {
 	
-	@import "_layout.less";
+	@import "_layout";
 
 
 	// Custom Styles
-	// -------------------	
+	// -------------------
+    
+    .mobile{
+        color: black;    
+    }
 
 }
