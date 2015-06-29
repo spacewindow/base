@@ -2,8 +2,6 @@
 // Mixins, Shortcuts & The Grid
 // --------------------------------------------------
 
-
-
 // Grid
 // -------------------
 
@@ -18,6 +16,8 @@ $columnWidth: ($containerWidth / $columnCount) * (1 - stripUnits($gutterRatio) /
 
 
 $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
+
+$baseline: $gutterWidth / 2; // this will be reset for each breakpoint
 
 @mixin container() {
     width: $columnWidth * $columnCount + $gutterWidth * $columnCount;
@@ -49,10 +49,13 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
     $width: ($columnWidth * $consideredColumns) + ($gutterWidth * ($consideredColumns - 1));
     $unit: $columnWidth - $columnWidth;
 
+    // add Sass method floor() to round down to nearest pixel - avoid sub-pixel issues for custom container widths
+
     float: left;
-    width: $width;
-    margin-left: $offsetWidth + $gutterWidth/2;
-    margin-right: $gutterWidth / 2;
+    width: floor($width);
+    margin-left: floor($offsetWidth + $gutterWidth/2);
+    margin-right: floor($gutterWidth / 2);
+
 }
 
 
@@ -371,18 +374,20 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
     transition-timing-function: $function;
 }
 
-// Border-box on everything
-
-
-
-// Clearfix
+// Extra Helper mixins
 
 .group{
     &:after {
-      content: "";
-      display: table;
-      clear: both;
+        content: "";
+        display: table;
+        clear: both;
     }
+}
+
+// Base unit of 16 pixels for calculating EMs.
+
+@function em($px, $base: 16) {
+    @return ($px / $base) * 1em;
 }
 
 // Border-box for everything
@@ -390,4 +395,3 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
 *, *:before, *:after{
     box-sizing: border-box;
 }
-

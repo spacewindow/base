@@ -7,7 +7,7 @@
 
 $containerWidth: 960px;
 $columnCount:    12; 
-$gutterRatio:    90%;
+$gutterRatio:    25%;
 
 
 // Type Variables
@@ -39,4 +39,14 @@ $lineHeight: 140%;
 
 .base{
     color: red;     
+}
+
+div{
+    background: red;
+    color: white;
+    margin-top: $baseline;
+}
+.container{
+    background: transparent;
+    @extend .group;
 }
