@@ -10,7 +10,7 @@ module.exports = function (grunt) {
               server: {
                 baseDir: './'   
               }
-//              startPath: "/mcguigan/",
+//              startPath: "/folder/",
 //              browser: "safari"
           }
         },

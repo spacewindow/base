@@ -17,8 +17,6 @@ $columnWidth: ($containerWidth / $columnCount) * (1 - stripUnits($gutterRatio) /
 
 $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
 
-$baseline: $gutterWidth / 2; // this will be reset for each breakpoint
-
 @mixin container() {
     width: $columnWidth * $columnCount + $gutterWidth * $columnCount;
 }
@@ -388,6 +386,11 @@ $baseline: $gutterWidth / 2; // this will be reset for each breakpoint
 
 @function em($px, $base: 16) {
     @return ($px / $base) * 1em;
+}
+
+@function baseline($multiplier) {
+    $baseline: floor($gutterWidth);
+    @return stripUnits($baseline * $multiplier) * 1px;
 }
 
 // Border-box for everything

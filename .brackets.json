@@ -1,16 +1,18 @@
 {
+    "sass.enabled": false,
     "path": {
-        "scss/*.scss": {
+        "scss/styles.scss": {
             "sass.enabled": false,
             "sass.options": {
-                "output": "site.css",
                 "outputDir": "../css/",
-                "includePaths": [],
+                "includePaths": [
+                    "./scss/"
+                ],
                 "imagePath": null,
                 "sourceComments": false,
                 "outputStyle": "nested"
             },
-            "linting.collapsed": true,
+            "linting.collapsed": false,
             "brackets-git.gitPath": "git",
             "mikaeljorhult.bracketsTodo.enabled": false
         }

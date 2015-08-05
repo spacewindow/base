@@ -38,6 +38,10 @@ footer {
 
 // TEST FILE
 
+body.test div:not(.container){
+    background: red;
+}
+
 .one{
    @include column(1);
 }
@@ -85,5 +89,7 @@ footer {
 .twelve{
     @include column(12);
 }
+
+$baseline: baseline(1);
 
 

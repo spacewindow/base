@@ -5,7 +5,7 @@
 // Grid Variables
 // -------------------
 
-$containerWidth: 960px;
+$containerWidth: 980px;
 $columnCount:    12; 
 $gutterRatio:    25%;
 
@@ -26,27 +26,20 @@ $lineHeight: 140%;
 @import "_mixins";
 
 @import "_layout";
-@import "_type";
-@import "_forms";
-@import "_buttons";
-@import "_menus";
-@import "_fonts"; 
-@import "_tooltips";
+//@import "_type";
+//@import "_forms";
+//@import "_buttons";
+//@import "_menus";
+//@import "_fonts";
+//@import "_tooltips";
 
 
 // Custom Styles
 // -------------------
 
-.base{
-    color: red;     
+.awesome{
+     height: $baseline*2;
 }
 
-div{
-    background: red;
-    color: white;
-    margin-top: $baseline;
-}
-.container{
-    background: transparent;
-    @extend .group;
-}
+
+

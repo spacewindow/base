@@ -8,13 +8,13 @@
 
 $containerWidth: 100%;
 $columnCount:    1;
-$gutterRatio:    10%;
+$gutterRatio:    0%;
 
 
 // Type Variables
 // -------------------
 
-$fontSize: 16px;
+$fontSize: 20px;
 $lineHeight: 140%;
 
 
@@ -28,12 +28,12 @@ $lineHeight: 140%;
 	
 	@import "_layout";
 
+    .awesome{
+        height: $baseline*1;
+    }
+
 
 	// Custom Styles
 	// -------------------
-    
-    .mobile{
-        color: black;    
-    }
 
 }

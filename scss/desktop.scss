@@ -6,10 +6,9 @@
 // Grid Variables
 // -------------------
 
-$containerWidth: 1140px;
+$containerWidth: 1170px;
 $columnCount:    12;
-$gutterRatio:    34%;
-
+$gutterRatio:    25%;
 
 // Type Variables
 // -------------------
@@ -28,13 +27,12 @@ $lineHeight: 140%;
 	
 	@import "_layout";
 
+    .awesome{
+         height: $baseline*2;
+    }
 
 	// Custom Styles
 	// -------------------
-    
-    .desktop{
-        color: black;    
-    }
 
 
 }
