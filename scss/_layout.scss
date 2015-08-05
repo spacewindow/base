@@ -6,6 +6,32 @@
 // Device agnostic layout styles. Construct the grid and box models here.
 // -------------------
 
+// Set baseline height
+
+$baseline: baseline();
+
+// Show baseline visual helper. Simply add class="baseline" to <body>
+
+body.baseline{
+
+    &:before{
+        content:'';
+        position: absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index:2;
+        background: linear-gradient(rgba(255,0,0,0.2) 0%, transparent 8%);
+        background-size: 100% $baseline;
+    }
+
+    div{
+        border-left: 1px solid rgba(255,0,0,0.2);
+        border-right: 1px solid rgba(255,0,0,0.2);
+    }
+}
+
 body {
 	font-size: $fontSize;
 	line-height: $lineHeight;
@@ -38,9 +64,9 @@ footer {
 
 // TEST FILE
 
-body.test div:not(.container){
-    background: red;
-}
+//body.test div:not(.container){
+//    background: red;
+//}
 
 .one{
    @include column(1);
@@ -90,6 +116,9 @@ body.test div:not(.container){
     @include column(12);
 }
 
-$baseline: baseline(1);
 
+
+p, h1{
+    line-height: $baseline;
+}
 

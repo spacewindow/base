@@ -388,9 +388,16 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
     @return ($px / $base) * 1em;
 }
 
-@function baseline($multiplier) {
-    $baseline: floor($gutterWidth);
-    @return stripUnits($baseline * $multiplier) * 1px;
+// Create a $baseline variable, calculated in pixels equal to the gutterWidth. Useful for horizontal spacing and vertical rhythm, with a fallback of 5px. The function is called in _layout.scss.
+
+@function baseline(){
+    $baselineHeight: floor($gutterWidth);
+    // for _mobile.scss
+    @if $baselineHeight != 0%{
+        @return $baselineHeight
+    }@else{
+        @return 15px
+    }
 }
 
 // Border-box for everything

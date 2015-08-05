@@ -37,6 +37,20 @@ table {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+body.baseline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
+  background-size: 100% 20px; }
+body.baseline div {
+  border-left: 1px solid rgba(255, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 0, 0, 0.2); }
+
 body {
   font-size: 15px;
   line-height: 140%; }
@@ -71,9 +85,6 @@ footer {
   width: 959px;
   margin-left: 10px;
   margin-right: 10px; }
-
-body.test div:not(.container) {
-  background: red; }
 
 .one {
   float: left;
@@ -147,8 +158,11 @@ body.test div:not(.container) {
   margin-left: 10px;
   margin-right: 10px; }
 
+p, h1 {
+  line-height: 20px; }
+
 .awesome {
-  height: 40px; }
+  height: 80px; }
 
 .group:after, .container:after {
   content: "";
@@ -159,6 +173,19 @@ body.test div:not(.container) {
   box-sizing: border-box; }
 
 @media (min-width: 1200px) {
+  body.baseline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
+    background-size: 100% 24px; }
+  body.baseline div {
+    border-left: 1px solid rgba(255, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 0, 0, 0.2); }
   body {
     font-size: 15px;
     line-height: 140%; }
@@ -187,8 +214,6 @@ body.test div:not(.container) {
     width: 1145px;
     margin-left: 12px;
     margin-right: 12px; }
-  body.test div:not(.container) {
-    background: red; }
   .one {
     float: left;
     width: 73px;
@@ -249,8 +274,10 @@ body.test div:not(.container) {
     width: 1145px;
     margin-left: 12px;
     margin-right: 12px; }
+  p, h1 {
+    line-height: 24px; }
   .awesome {
-    height: 48px; } }
+    height: 96px; } }
 
 .group:after, .container:after {
   content: "";
@@ -261,6 +288,19 @@ body.test div:not(.container) {
   box-sizing: border-box; }
 
 @media (min-width: 768px) and (max-width: 959px) {
+  body.baseline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
+    background-size: 100% 16px; }
+  body.baseline div {
+    border-left: 1px solid rgba(255, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 0, 0, 0.2); }
   body {
     font-size: 14px;
     line-height: 140%; }
@@ -289,8 +329,6 @@ body.test div:not(.container) {
     width: 752px;
     margin-left: 8px;
     margin-right: 8px; }
-  body.test div:not(.container) {
-    background: red; }
   .one {
     float: left;
     width: 48px;
@@ -351,6 +389,8 @@ body.test div:not(.container) {
     width: 752px;
     margin-left: 8px;
     margin-right: 8px; }
+  p, h1 {
+    line-height: 16px; }
   .tablet {
     color: black; } }
 
@@ -363,6 +403,19 @@ body.test div:not(.container) {
   box-sizing: border-box; }
 
 @media (max-width: 767px) {
+  body.baseline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
+    background-size: 100% 15px; }
+  body.baseline div {
+    border-left: 1px solid rgba(255, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 0, 0, 0.2); }
   body {
     font-size: 20px;
     line-height: 140%; }
@@ -391,8 +444,6 @@ body.test div:not(.container) {
     width: 100%;
     margin-left: 0%;
     margin-right: 0%; }
-  body.test div:not(.container) {
-    background: red; }
   .one {
     float: left;
     width: 100%;
@@ -453,5 +504,7 @@ body.test div:not(.container) {
     width: 100%;
     margin-left: 0%;
     margin-right: 0%; }
+  p, h1 {
+    line-height: 15px; }
   .awesome {
-    height: 0px; } }
+    height: 60px; } }

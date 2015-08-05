@@ -28,12 +28,12 @@ $lineHeight: 140%;
 	
 	@import "_layout";
 
-    .awesome{
-        height: $baseline*1;
-    }
-
 
 	// Custom Styles
 	// -------------------
+
+    .awesome{
+    height: $baseline*4;
+}
 
 }
