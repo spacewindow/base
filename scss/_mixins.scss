@@ -5,29 +5,28 @@
 // Grid
 // -------------------
 
+// Function to strip units from variables temporarily for calculations
+
 @function stripUnits($value) {
     @return $value / ($value * 0 + 1);
 }
 
-//@warn stripUnits($gutterRatio);
+$columnSize: ($containerWidth / $columnCount) * (1 - stripUnits($gutterRatio) / 100);
 
 
-$columnWidth: ($containerWidth / $columnCount) * (1 - stripUnits($gutterRatio) / 100);
-
-
-$gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
+$gutterWidth: ($containerWidth / $columnCount) - $columnSize;
 
 @mixin container() {
-    width: $columnWidth * $columnCount + $gutterWidth * $columnCount;
+    width: $columnSize * $columnCount + $gutterWidth * $columnCount;
 }
 
 
 @mixin absoluteContainer() {
-    width: $columnWidth * $columnCount + $gutterWidth * $columnCount;
+    width: $columnSize * $columnCount + $gutterWidth * $columnCount;
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -(($columnWidth * $columnCount + $gutterWidth * $columnCount) / 2);
+    margin-left: -(($columnSize * $columnCount + $gutterWidth * $columnCount) / 2);
 }
 
 @mixin column($columns: 1, $offset: 0){
@@ -43,14 +42,14 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
         $offset: 0;
     }
     
-    $offsetWidth: $columnWidth * $offset + $gutterWidth * $offset;
-    $width: ($columnWidth * $consideredColumns) + ($gutterWidth * ($consideredColumns - 1));
-    $unit: $columnWidth - $columnWidth;
+    $offsetWidth: $columnSize * $offset + $gutterWidth * $offset;
+    $width: ($columnSize * $consideredColumns) + ($gutterWidth * ($consideredColumns - 1));
+    $unit: $columnSize - $columnSize;
 
-    // add Sass method floor() to round down to nearest pixel - avoid sub-pixel issues for custom container widths
+    // add Sass method floor() to round down to nearest pixel - avoid sub-pixel issues on eg Firefox for custom column widths
 
     float: left;
-    width: floor($width);
+    width: $width;
     margin-left: floor($offsetWidth + $gutterWidth/2);
     margin-right: floor($gutterWidth / 2);
 
@@ -382,16 +381,20 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
     }
 }
 
-// Base unit of 16 pixels for calculating EMs.
+// Border-box for everything
 
-@function em($px, $base: 16) {
-    @return ($px / $base) * 1em;
+*, *:before, *:after{
+    box-sizing: border-box;
 }
 
-// Create a $baseline variable, calculated in pixels equal to the gutterWidth. Useful for horizontal spacing and vertical rhythm, with a fallback of 5px. The function is called in _layout.scss.
+// Create a $baseline variable, calculated in pixels equal to the gutterWidth.
+
+// Useful for horizontal spacing and vertical rhythm, with a fallback of 15px.
+
+// The function is called in _layout.scss.
 
 @function baseline(){
-    $baselineHeight: floor($gutterWidth);
+    $baselineHeight: $gutterWidth;
     // for _mobile.scss
     @if $baselineHeight != 0%{
         @return $baselineHeight
@@ -400,8 +403,6 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnWidth;
     }
 }
 
-// Border-box for everything
-
-*, *:before, *:after{
-    box-sizing: border-box;
+@function columnwidth(){
+    @return stripUnits($columnSize)*1px
 }

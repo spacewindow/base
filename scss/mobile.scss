@@ -15,7 +15,6 @@ $gutterRatio:    0%;
 // -------------------
 
 $fontSize: 20px;
-$lineHeight: 140%;
 
 
 // Base Styles
@@ -27,6 +26,7 @@ $lineHeight: 140%;
 @media (max-width: 767px) {
 	
 	@import "_layout";
+    @import "_type";
 
 
 	// Custom Styles

@@ -7,13 +7,13 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-    padding: 0.625em 1.25em;
-    margin: 0 0 0.625em;
+    padding: $b/2 $b/2;
+    margin: 0 0 $b/2;
     font-family: inherit;
-    font-size: 1em;
+    font-size: 1rem;
     border: none;
     outline: none;
-    line-height: 100%;
+    line-height: $b*2;
     cursor: pointer;
     text-decoration: none;
     -webkit-appearance: none;
@@ -23,9 +23,9 @@ input[type="reset"] {
     @include button-style($baseColor, $textColor);
 
     &.huge{
-        font-size: 1.25em;
+        font-size: $b/2;
         font-weight: 600;
-        padding: 0.625em 2em;
+        padding: $b/2;
     }
 }
 
@@ -45,7 +45,7 @@ button.facebook,
 .button-facebook,
 input.button-facebook {
     @include button-style($socialFacebook, white);
-	padding-left: 0.6em;
+	padding-left: $b/2;
 
 	&.disabled {
 		background: #9099ae;

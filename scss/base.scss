@@ -13,8 +13,7 @@ $gutterRatio:    25%;
 // Type Variables
 // -------------------
 
-$fontSize: 15px;
-$lineHeight: 140%;
+$fontSize: 16px;
 
 
 // Base Styles
@@ -26,18 +25,29 @@ $lineHeight: 140%;
 @import "_mixins";
 
 @import "_layout";
-//@import "_type";
+@import "_type";
 //@import "_forms";
 //@import "_buttons";
 //@import "_menus";
-//@import "_fonts";
+@import "_fonts";
 //@import "_tooltips";
 
 
 // Custom Styles
 // -------------------
 
+header {
+	background: yellow;
+}
 
-.awesome{
-    height: $baseline*4;
+article {
+	background: orange;
+}
+
+aside {
+	background: orange;
+}
+
+footer {
+	background: grey;
 }

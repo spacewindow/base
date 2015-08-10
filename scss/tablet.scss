@@ -8,14 +8,13 @@
 
 $containerWidth: 768px;
 $columnCount:    12;
-$gutterRatio:    25%;
+$gutterRatio:    35%;
 
 
 // Type Variables
 // -------------------
 
-$fontSize: 14px;
-$lineHeight: 140%;
+$fontSize: 16px;
 
 
 // Base Styles
@@ -27,6 +26,7 @@ $lineHeight: 140%;
 @media (min-width: 768px) and (max-width: 959px) {
 	
 	@import "_layout";
+    @import "_type";
 	
 
 	// Custom Styles

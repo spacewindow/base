@@ -24,44 +24,49 @@ h6 {
 }
 
 h1 { 
-	font-size: 3em;
-	margin-top: 0.75em;
-	margin-bottom: 0.25em;
+	font-size: 3rem;
+    line-height: $b*2.5;
+	margin-top: $b/2;
+	margin-bottom: $b;
 }
 h2 { 
-	font-size: 2em;
-	margin-top: 1em;
-	margin-bottom: 0.75em;
+	font-size: 2rem;
+    line-height: $b*2;
+	margin-top: $b;
+	margin-bottom: $b/2;
 }
 h3 { 
-	font-size: 1.5em;
-	margin-top: 1.25em;
-	margin-bottom: 0.5em;
+	font-size: 1.5rem;
+    line-height: $b*1.5;
+	margin-top: $b;
+	margin-bottom: $b/2;
 	font-weight: normal;
 }
 h4 {
-	font-size: 1.25em;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	font-size: 1rem;
+    line-height: $b;
+	margin-top: $b;
+	margin-bottom: $b/2;
 	font-weight: normal;
 	color: lighten($textColor, 30%);
 }
 h5 {
-	font-size: 1.125em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	font-size: 1.125rem;
+	margin-top: $b/2;
+	margin-bottom: $b/2;
 }
 h6 {
-	font-size: 1em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	font-size: 1rem;
+	margin-top: $b/2;
+	margin-bottom: $b/2;
 }
 
 // Paragraph
 // -------------------
 
 p {
-	margin: 1em 0;
+	line-height: $b;
+    margin: $b/2 0 $b;
 }
 a {
 	color: $primaryColor;
@@ -82,13 +87,13 @@ acronym {
 }
 
 address {
-	font-size: 1em;
+	font-size: 1rem;
 	font-style: italic;
 }
 
 blockquote {
-	margin: 1em 0;
-	padding: 0 0 0 2em;
+	margin: $b/2 0;
+	padding: 0 0 0 $b;
 }
 
 cite {
@@ -96,12 +101,12 @@ cite {
 }
 
 code {
-	font-size: 1em;
+	font-size: 1rem;
 	font-family: monospace;
 	background: $baseColor;
-	border: 1px solid darken($baseColor, 5%);
-	padding: 0.125em 0.25em;
-	line-height: 150%;
+//	border: 1px solid darken($baseColor, 5%);
+//    padding: $b/2;
+//    line-height: $b*2;
 }
 
 em,
@@ -117,18 +122,19 @@ b {
 hr {
 	outline: none;
 	border: none;
-	margin: 1em 0;
+	margin: $b 0;
 	padding: 0;
 	border-top: 1px solid $baseColor;
 }
 
 ol,
 ul {
-	margin: 1em 0;
-	padding: 0 0 0 2em;
+	margin: $b 0;
+	padding: 0 0 0 $b;
 
 	li {
-		font-size: 1em;
+		font-size: 1rem;
+        line-height: $b;
 		list-style-position: outside;
 	}
 }
@@ -139,20 +145,20 @@ ol li { list-style: decimal; }
 // -------------------
 
 form {
-	margin: 1em 0;
+	margin: $b 0;
 }
 
 // Descriptions
 // -------------------
 
 dl {
-	margin: 1em 0;
+	margin: $b 0;
 
 	dt {
 		font-weight: bold;
 	}
 	dd {
-		margin: 0 0 0.5em;
+		margin: 0 0 $b/2;
 	}
 }
 
@@ -161,18 +167,20 @@ dl {
 
 table {
 	width: 100%;
-	margin: 1em 0;
+	margin: $b/2 0;
 
 	th {
-		padding: 0.5em;
+		padding: $b/2;
 		border: 1px solid $baseColor;
 		background: lighten($baseColor, 2.5%);
 		text-align: left;
 		font-weight: bold;
+        line-height: $b - 1px;
 	}
 	td {
-		padding: 0.5em;
+		padding: $b/2 - 1px;
 		border: 1px solid $baseColor;
+        line-height: $b;
 	}
 }
 
