@@ -95,7 +95,7 @@ body.guides {
     left: 0;
     z-index: 2;
     background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
-    background-size: 100% 20px;
+    background-size: 100% 20.41667px;
     pointer-events: none; }
   body.guides .container {
     position: relative;
@@ -109,8 +109,8 @@ body.guides {
       bottom: 0;
       left: 0;
       z-index: 2;
-      background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 19px, rgba(255, 0, 0, 0.3) 19px, rgba(255, 0, 0, 0) 20px, rgba(255, 0, 0, 0) 81px);
-      background-position: -10px;
+      background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 19.41667px, rgba(255, 0, 0, 0.3) 19.41667px, rgba(255, 0, 0, 0) 20.41667px, rgba(255, 0, 0, 0) 81.66667px);
+      background-position: -10.20833px;
       pointer-events: none; }
     @media (max-width: 767px) {
       body.guides .container:before {
@@ -1497,7 +1497,7 @@ footer {
       left: 0;
       z-index: 2;
       background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
-      background-size: 100% 29px;
+      background-size: 100% 29.25px;
       pointer-events: none; }
     body.guides .container {
       position: relative;
@@ -1511,8 +1511,8 @@ footer {
         bottom: 0;
         left: 0;
         z-index: 2;
-        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 28px, rgba(255, 0, 0, 0.3) 28px, rgba(255, 0, 0, 0) 29px, rgba(255, 0, 0, 0) 97px);
-        background-position: -14.5px;
+        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 28.25px, rgba(255, 0, 0, 0.3) 28.25px, rgba(255, 0, 0, 0) 29.25px, rgba(255, 0, 0, 0) 97.5px);
+        background-position: -14.625px;
         pointer-events: none; } }
     @media (min-width: 1200px) and (max-width: 767px) {
       body.guides .container:before {
@@ -1682,7 +1682,7 @@ footer {
       left: 0;
       z-index: 2;
       background: linear-gradient(rgba(255, 0, 0, 0.2) 0%, transparent 8%);
-      background-size: 100% 22px;
+      background-size: 100% 22.4px;
       pointer-events: none; }
     body.guides .container {
       position: relative;
@@ -1696,8 +1696,8 @@ footer {
         bottom: 0;
         left: 0;
         z-index: 2;
-        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 21px, rgba(255, 0, 0, 0.3) 21px, rgba(255, 0, 0, 0) 22px, rgba(255, 0, 0, 0) 63px);
-        background-position: -11px;
+        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0px, rgba(255, 0, 0, 0) 1px, rgba(255, 0, 0, 0) 21.4px, rgba(255, 0, 0, 0.3) 21.4px, rgba(255, 0, 0, 0) 22.4px, rgba(255, 0, 0, 0) 64px);
+        background-position: -11.2px;
         pointer-events: none; } }
     @media (min-width: 768px) and (max-width: 959px) and (max-width: 767px) {
       body.guides .container:before {

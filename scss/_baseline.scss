@@ -23,7 +23,7 @@ body.guides{
         left:0;
         z-index:2;
         background: linear-gradient(rgba(255,0,0,0.2) 0%, transparent 8%);
-        background-size: 100% $b;
+        background-size: 100% $baseline;
         pointer-events: none;
     }
 
@@ -47,11 +47,11 @@ body.guides{
                 90deg,
                 rgba(255,0,0,0.3) 0px,
                 rgba(255,0,0,0) 1px,
-                rgba(255,0,0,0) ($b - 1px),
-                rgba(255,0,0,0.3) ($b - 1px),
-                rgba(255,0,0,0) $b,
-                rgba(255,0,0,0) ($b + $c));
-            background-position: -($b / 2);
+                rgba(255,0,0,0) ($baseline - 1px),
+                rgba(255,0,0,0.3) ($baseline - 1px),
+                rgba(255,0,0,0) $baseline,
+                rgba(255,0,0,0) ($baseline + $columnwidth));
+            background-position: -($baseline / 2);
             pointer-events: none;
         }
         @media (max-width: 767px) {
