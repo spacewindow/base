@@ -2,28 +2,25 @@
 // Base CSS File - Standard Desktops & CSS Default ~960px
 // --------------------------------------------------
 
-// Grid Variables
+// Grid and Type Variables
 // -------------------
 
 $containerWidth: 980px;
 $columnCount:    12; 
-$gutterRatio:    25%;
-
-
-// Type Variables
-// -------------------
+$gutterRatio:    0%;
 
 $fontSize: 16px;
-
-
-// Base Styles
-// -------------------
-
-@import "_reset"; 
 
 @import "_variables";
 @import "_mixins";
 
+// $baseline by default is the gutterWidth. Alternatively, override with a pixel value...
+
+ $baseline: 10px;
+
+// -------------------
+
+@import "_reset";
 @import "_layout";
 @import "_type";
 //@import "_forms";
@@ -36,18 +33,3 @@ $fontSize: 16px;
 // Custom Styles
 // -------------------
 
-header {
-	background: yellow;
-}
-
-article {
-	background: orange;
-}
-
-aside {
-	background: orange;
-}
-
-footer {
-	background: grey;
-}

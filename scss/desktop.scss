@@ -1,39 +1,31 @@
 //
-// Responsive CSS File - Large Desktops ~1200px
+// Responsive CSS File - Large Desktops ~1280px
 // --------------------------------------------------
 
 
-// Grid Variables
+// Grid and Type Variables
 // -------------------
 
-$containerWidth: 1170px;
+$containerWidth: 1280px;
 $columnCount:    12;
-$gutterRatio:    30%;
-
-// Type Variables
-// -------------------
-
-$fontSize: 18px;
-
-
-// Base Styles
-// -------------------
+$gutterRatio:    25%;
 
 @import "_variables"; // site variables
 @import "_mixins"; // grid and mixins
 
-@media (min-width: 1200px) {
-	
+/* BASELINE */
+
+// $baseline by default is the gutterWidth. Alternatively, override with a pixel value below.
+
+// $baseline: 30px;
+
+// -------------------
+
+@media (min-width: 1280px) {
+
 	@import "_layout";
-    @import "_type";
 
 	// Custom Styles
 	// -------------------
-
-        body.guides{
-            height: 5000px;
-//            background: url(../images/mockup.jpg) top center no-repeat;
-        }
-
 
 }

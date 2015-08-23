@@ -3,38 +3,29 @@
 // --------------------------------------------------
 
 
-// Grid Variables
+// Grid and Type Variables
 // -------------------
 
 $containerWidth: 768px;
 $columnCount:    12;
-$gutterRatio:    35%;
-
-
-// Type Variables
-// -------------------
+$gutterRatio:    0%;
 
 $fontSize: 16px;
 
-
-// Base Styles
-// -------------------
-
 @import "_variables"; // site variables
-@import "_mixins"; // grid and mixins	
+@import "_mixins"; // grid and mixins
+
+// $baseline by default is the gutterWidth. Alternatively, override with a pixel value...
+
+ $baseline: 30px;
+
+// -------------------
 
 @media (min-width: 768px) and (max-width: 959px) {
 	
 	@import "_layout";
-    @import "_type";
-	
 
 	// Custom Styles
 	// -------------------
-    
-    .tablet{
-        color: black;    
-    }
-
 
 }

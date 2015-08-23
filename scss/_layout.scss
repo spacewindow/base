@@ -3,12 +3,14 @@
 // --------------------------------------------------
 
 
+
 // Device agnostic layout styles. Construct the grid and box models here.
 // -------------------
 
+// $baseline is the basis for rems
 
 html {
-	font-size: $fontSize;
+	font-size: $baseline;
 }
 
 .container { // kept for utility
@@ -22,18 +24,18 @@ header {
 }
 
 article {
-	@include column(9);
+	@include column(4);
 }
 
 aside {
-	@include column(3);
+	@include column(4);
 }
 
 footer {
 	@include column(6, 6);
 }
 
-// Device specific $baseline/$gutterwidth and $columnwidth measurements and guidea
+// for development use only - comment out for production
 
-@import "_baseline";
+@import "_guides";
 

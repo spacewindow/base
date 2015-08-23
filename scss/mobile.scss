@@ -3,37 +3,30 @@
 // --------------------------------------------------
 
 
-// Grid Variables
+// Grid and Type Variables
 // -------------------
 
 $containerWidth: 100%;
 $columnCount:    1;
-$gutterRatio:    0%;
-
-
-// Type Variables
-// -------------------
+$gutterRatio:    5%;
 
 $fontSize: 20px;
-
-
-// Base Styles
-// -------------------
 
 @import "_variables"; // site variables
 @import "_mixins"; // grid and mixins
 
+// $baseline by default is the gutterWidth. Alternatively, override with a pixel value...
+
+ $baseline: 30px;
+
+// -------------------
+
 @media (max-width: 767px) {
 	
 	@import "_layout";
-    @import "_type";
 
 
 	// Custom Styles
 	// -------------------
-
-    .awesome{
-    height: $baseline*4;
-}
 
 }

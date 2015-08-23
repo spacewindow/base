@@ -1,63 +1,9 @@
 // Set baseline and columnWidth
 
-$baseline: baseline();
-$b: floor($baseline); // for brevity in dev
-$columnwidth: columnwidth();
-$c: floor($columnwidth);  // for brevity in dev
+//$b: $baseline; // for brevity in dev
+
+//$c: $columnwidth;  // for brevity in dev
 
 // Show baseline visual helper. Simply add class="baseline" to <body>
 
-body.guides{
-    position: relative;
-//    z-index:2;
 
-    // Baseline Guides
-
-    &:before{
-        content:'';
-        position: absolute;
-        z-index:-1;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-        z-index:2;
-        background: linear-gradient(rgba(255,0,0,0.2) 0%, transparent 8%);
-        background-size: 100% $baseline;
-        pointer-events: none;
-    }
-
-    // Column Guides
-
-    .container{
-        position: relative;
-//        z-index:2;
-        box-shadow: inset -1px 0 1px -1px red, inset 1px 0px 0px 0px rgba(255,0,0,0.2);
-
-        &:before{
-            content:'';
-            position: absolute;
-            z-index:-1;
-            top:0;
-            right:0;
-            bottom:0;
-            left:0;
-            z-index:2;
-            background-image: repeating-linear-gradient(
-                90deg,
-                rgba(255,0,0,0.3) 0px,
-                rgba(255,0,0,0) 1px,
-                rgba(255,0,0,0) ($baseline - 1px),
-                rgba(255,0,0,0.3) ($baseline - 1px),
-                rgba(255,0,0,0) $baseline,
-                rgba(255,0,0,0) ($baseline + $columnwidth));
-            background-position: -($baseline / 2);
-            pointer-events: none;
-        }
-        @media (max-width: 767px) {
-            &:before{
-                display:none;
-            }
-        }
-    }
-}

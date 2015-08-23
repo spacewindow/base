@@ -1,0 +1,62 @@
+.demo{
+    @include column(12);
+}
+
+/* GUIDES - for development utility only */
+
+body.guides{
+
+    position: relative;
+
+    // Baseline Guides
+
+    &:before{
+        content:'';
+        position: absolute;
+        z-index:-1;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index:2;
+        background: linear-gradient(rgba(255,0,0,0.2) 0%, transparent 8%);
+        background-size: 100% $baseline;
+        pointer-events: none;
+    }
+
+    .container{
+        position: relative;
+        box-shadow: inset -1px 0 1px -1px red, inset 1px 0px 0px 0px rgba(255,0,0,0.2);
+
+        &:before{
+            content:'';
+            position: absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            z-index:2;
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(255,0,0,0) 0px,
+                rgba(255,0,0,0) $gutter,
+                rgba(255,0,0,0.2) $gutter + 1px,
+                rgba(255,0,0,0.2) $gutter + $columnwidth);
+            background-position: -($gutter / 2);
+            pointer-events: none;
+        }
+        @media (max-width: 767px) {
+            &:before{
+                display:none;
+            }
+        }
+    }
+
+    @media (min-width: 1280px) {
+//        background: url('../images/desktop-mockup.jpg') no-repeat top center;
+    }
+
+    .baseline{
+        height: $baseline;
+    }
+}

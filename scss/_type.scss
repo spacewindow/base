@@ -13,60 +13,57 @@ body {
 // Headings
 // -------------------
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $headingFont;
-	font-weight: bold;
-}
-
 h1 { 
-	font-size: 3rem;
-    line-height: $b*2.5;
-	margin-top: $b/2;
-	margin-bottom: $b;
+	font-family: $headingFont;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 2.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
 }
 h2 { 
-	font-size: 2rem;
-    line-height: $b*2;
-	margin-top: $b;
-	margin-bottom: $b/2;
+	font-family: $headingFont;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 }
 h3 { 
-	font-size: 1.5rem;
-    line-height: $b*1.5;
-	margin-top: $b;
-	margin-bottom: $b/2;
-	font-weight: normal;
+	font-family: $paragraphFont;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 }
 h4 {
-	font-size: 1rem;
-    line-height: $b;
-	margin-top: $b;
-	margin-bottom: $b/2;
-	font-weight: normal;
+	font-family: $paragraphFont;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
 	color: lighten($textColor, 30%);
 }
 h5 {
 	font-size: 1.125rem;
-	margin-top: $b/2;
-	margin-bottom: $b/2;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 h6 {
 	font-size: 1rem;
-	margin-top: $b/2;
-	margin-bottom: $b/2;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 // Paragraph
 // -------------------
 
 p {
-	line-height: $b;
-    margin: $b/2 0 $b;
+	font-size: 0.69rem;
+    line-height: 1rem;
+    margin: 0.5rem 0 1rem;
 }
 a {
 	color: $primaryColor;
@@ -92,8 +89,8 @@ address {
 }
 
 blockquote {
-	margin: $b/2 0;
-	padding: 0 0 0 $b;
+	margin: 0.5rem 0;
+	padding: 0 0 0 1rem;
 }
 
 cite {
@@ -105,8 +102,8 @@ code {
 	font-family: monospace;
 	background: $baseColor;
 //	border: 1px solid darken($baseColor, 5%);
-//    padding: $b/2;
-//    line-height: $b*2;
+//    padding: 0.5rem;
+//    line-height: 2rem;
 }
 
 em,
@@ -122,19 +119,19 @@ b {
 hr {
 	outline: none;
 	border: none;
-	margin: $b 0;
+	margin: 1rem 0;
 	padding: 0;
 	border-top: 1px solid $baseColor;
 }
 
 ol,
 ul {
-	margin: $b 0;
-	padding: 0 0 0 $b;
+	margin: 1rem 0;
+	padding: 0 0 0 1rem;
 
 	li {
 		font-size: 1rem;
-        line-height: $b;
+        line-height: 1rem;
 		list-style-position: outside;
 	}
 }
@@ -145,20 +142,20 @@ ol li { list-style: decimal; }
 // -------------------
 
 form {
-	margin: $b 0;
+	margin: 1rem 0;
 }
 
 // Descriptions
 // -------------------
 
 dl {
-	margin: $b 0;
+	margin: 1rem 0;
 
 	dt {
 		font-weight: bold;
 	}
 	dd {
-		margin: 0 0 $b/2;
+		margin: 0 0 0.5rem;
 	}
 }
 
@@ -167,20 +164,20 @@ dl {
 
 table {
 	width: 100%;
-	margin: $b/2 0;
+	margin: 0.5rem 0;
 
 	th {
-		padding: $b/2;
+		padding: 0.5rem;
 		border: 1px solid $baseColor;
 		background: lighten($baseColor, 2.5%);
 		text-align: left;
 		font-weight: bold;
-        line-height: $b - 1px;
+        line-height: 1rem;
 	}
 	td {
-		padding: $b/2 - 1px;
+		padding: 0.5rem;
 		border: 1px solid $baseColor;
-        line-height: $b;
+        line-height: 1rem;
 	}
 }
 

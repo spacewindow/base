@@ -46,12 +46,10 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnSize;
     $width: ($columnSize * $consideredColumns) + ($gutterWidth * ($consideredColumns - 1));
     $unit: $columnSize - $columnSize;
 
-    // add Sass method floor() to round down to nearest pixel - avoid sub-pixel issues on eg Firefox for custom column widths
-
     float: left;
     width: $width;
-    margin-left: floor($offsetWidth + $gutterWidth/2);
-    margin-right: floor($gutterWidth / 2);
+    margin-left: $offsetWidth + $gutterWidth/2;
+    margin-right: $gutterWidth / 2;
 
 }
 
@@ -393,16 +391,15 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnSize;
 
 // The function is called in _layout.scss.
 
-@function baseline(){
-    $baselineHeight: $gutterWidth;
-    // for _mobile.scss
-    @if $baselineHeight != 0%{
-        @return $baselineHeight
-    }@else{
-        @return 15px
-    }
+@function gutterwidth(){
+        $strip: stripUnits($gutterWidth);
+        @return $strip * 1px
 }
 
 @function columnwidth(){
     @return stripUnits($columnSize)*1px
 }
+
+$baseline: round(gutterwidth());
+$columnwidth: columnwidth();
+$gutter: gutterwidth();
