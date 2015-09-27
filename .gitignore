@@ -13,3 +13,5 @@ Thumbs.db
 # Ignore npm/grunt modules
 node_modules
 npm-debug.log
+/documentation/
+/css/styles.css.map
