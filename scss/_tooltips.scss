@@ -18,7 +18,7 @@
 	}
 
 	&:before {
-		@include arrow-down(7px, $textColor);
+		@include arrow-down(7px, $black);
 		content: '';
 		top: 0;
 		left: 50%;
@@ -39,8 +39,8 @@
 		margin-top: 10px;
 		width: 15em;
 		line-height: 120%;
-		background: $textColor;
-		color: $baseColor;
+		background: $black;
+		color: $lightgrey;
 	}
 	&:hover:before,
 	&:hover:after {

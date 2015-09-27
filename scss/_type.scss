@@ -4,7 +4,7 @@
 
 
 body {
-	color: $textColor;
+	color: $black;
 	font-family: $paragraphFont;
 	-webkit-font-smoothing: antialiased;
 }
@@ -16,8 +16,8 @@ body {
 h1 { 
 	font-family: $headingFont;
     font-weight: 700;
-    font-size: 3rem;
-    line-height: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 }
@@ -25,17 +25,17 @@ h2 {
 	font-family: $headingFont;
     font-weight: 400;
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
 	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 h3 { 
 	font-family: $paragraphFont;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
 	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 h4 {
 	font-family: $paragraphFont;
@@ -44,15 +44,17 @@ h4 {
     line-height: 1rem;
 	margin-top: 1rem;
 	margin-bottom: 0.5rem;
-	color: lighten($textColor, 30%);
+	color: lighten($black, 30%);
 }
 h5 {
 	font-size: 1.125rem;
+    line-height: 1.5rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
 h6 {
 	font-size: 1rem;
+    line-height: 1.5rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
@@ -66,8 +68,8 @@ p {
     margin: 0.5rem 0 1rem;
 }
 a {
-	color: $primaryColor;
-	text-decoration: none;
+	color: $darkgrey;
+	text-decoration: underline;
 
 	&:hover {
 		text-decoration: underline;
@@ -98,12 +100,20 @@ cite {
 }
 
 code {
-	font-size: 1rem;
+	font-size: 1em;
 	font-family: monospace;
-	background: $baseColor;
-//	border: 1px solid darken($baseColor, 5%);
+	background: $lightgrey;
+//	border: 1px solid darken($lightgrey, 5%);
 //    padding: 0.5rem;
 //    line-height: 2rem;
+}
+
+pre{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: $lightgrey;
+    font-size: 0.7em;
+	font-family: monospace;
 }
 
 em,
@@ -121,22 +131,30 @@ hr {
 	border: none;
 	margin: 1rem 0;
 	padding: 0;
-	border-top: 1px solid $baseColor;
+	border-top: 1px solid $lightgrey;
 }
 
 ol,
 ul {
 	margin: 1rem 0;
-	padding: 0 0 0 1rem;
 
 	li {
-		font-size: 1rem;
+		font-size: 0.69rem;
         line-height: 1rem;
+        margin-bottom: 0.5rem;
 		list-style-position: outside;
 	}
 }
 ul li { list-style: disc; }
 ol li { list-style: decimal; }
+
+ul{
+    padding: 0 0 0 1.5em;
+}
+
+ol{
+    padding: 0 0 0 2em;
+}
 
 // Form
 // -------------------
@@ -168,15 +186,17 @@ table {
 
 	th {
 		padding: 0.5rem;
-		border: 1px solid $baseColor;
-		background: lighten($baseColor, 2.5%);
+		border: 0.05rem solid $black;
+		background: lighten($lightgrey, 2.5%);
 		text-align: left;
+        font-size: 0.69rem;
 		font-weight: bold;
-        line-height: 1rem;
+        line-height: 1.5rem;
 	}
 	td {
 		padding: 0.5rem;
-		border: 1px solid $baseColor;
+		border: 0.05rem solid $black;
+        font-size: 0.69rem;
         line-height: 1rem;
 	}
 }

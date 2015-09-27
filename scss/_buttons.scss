@@ -7,45 +7,45 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-    padding: $b/2 $b/2;
-    margin: 0 0 $b/2;
+    padding: 0.25rem 1rem;
+    margin: 0 0 0.5rem;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.69rem;
     border: none;
     outline: none;
-    line-height: $b*2;
+    line-height: 2rem;
     cursor: pointer;
     text-decoration: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     @include inline-block();
 
-    @include button-style($baseColor, $textColor);
+    @include button-style($lightgrey, $black);
 
     &.huge{
-        font-size: $b/2;
+        font-size: 0.5rem;
         font-weight: 600;
-        padding: $b/2;
+        padding: 0.5rem;
     }
 }
 
 button.primary,
 .button-primary,
 input.button-primary {
-	@include button-style($primaryColor, white);
+	@include button-style($midgrey, white);
 }
 
 button.secondary,
 .button-secondary,
 input.button-secondary {
-    @include button-style($secondaryColor, white);
+    @include button-style($black, white);
 }
 
 button.facebook,
 .button-facebook,
 input.button-facebook {
     @include button-style($socialFacebook, white);
-	padding-left: $b/2;
+	padding-left: 0.5rem;
 
 	&.disabled {
 		background: #9099ae;

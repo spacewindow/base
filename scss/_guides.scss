@@ -2,6 +2,14 @@
     @include column(12);
 }
 
+.toggle{
+    margin: 0.5rem 0;
+    position: relative;
+    button{
+        width: 100%;
+    }
+}
+
 /* GUIDES - for development utility only */
 
 body.guides{
@@ -19,7 +27,7 @@ body.guides{
         bottom:0;
         left:0;
         z-index:2;
-        background: linear-gradient(rgba(255,0,0,0.2) 0%, transparent 8%);
+        background-image: linear-gradient(to bottom,#ff9999 0,rgba(255,255,255,0)1px);
         background-size: 100% $baseline;
         pointer-events: none;
     }
@@ -56,7 +64,8 @@ body.guides{
 //        background: url('../images/desktop-mockup.jpg') no-repeat top center;
     }
 
-    .baseline{
-        height: $baseline;
-    }
+}
+
+.baseline{
+    height: $baseline;
 }

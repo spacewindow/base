@@ -54,7 +54,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('uglify', function () {
-    gulp.src(['private/js/docCookies.js', 'private/js/app.js'])
+    gulp.src(['js/vendor/*.js', 'js/main.js'])
 
         //  Stops crashing watch on error.
         .pipe(plumber())
@@ -63,7 +63,7 @@ gulp.task('uglify', function () {
         .pipe(srcmaps.init())
 
         //  Concat all files.
-        .pipe(concat('datarati-lc-tmca.js'))
+        .pipe(concat('app.js'))
 
 
         //  Set the destination folder for the concat file.
@@ -84,7 +84,7 @@ gulp.task('uglify', function () {
         .pipe(srcmaps.write('/'))
 
         //  Set the output destination for the final file.
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('js'));
 
 });
 
@@ -101,6 +101,6 @@ gulp.task('prefix', function () {
 gulp.task('watch', function () {
 
     gulp.watch('scss/*.scss', ['sass']);
-    //gulp.watch(['private/js/docCookies.js', 'private/js/app.js'], ['uglify']);
+    gulp.watch(['main.js'], ['uglify']);
 
 });

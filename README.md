@@ -1,9 +1,9 @@
-[Base 1.0.2](http://base.gs/)
+[Base [Sass Version] 1.0.2](http://base.gs/)
 ======
 
 **Base is a semantic, lightweight and extensible framework to power the next generation of responsive websites.**
 
-It's created and maintained by the team at [@agencysc](https://twitter.com/agencysc). Head over to [base.gs](http://base.gs) to try it out and follow [@BaseGS](https://twitter.com/basegs) for framework updates.
+It's created and maintained by the team at [@agencysc](https://twitter.com/agencysc). This version forked and modified by [Rob Thwaites](http://robthwaites.com).
 
 ## Get Started
 
@@ -19,65 +19,60 @@ When you download Base you'll see a boilerplate `index.html` file and a folder s
 ```
 | js/
     vendor/
-      jquery-1.10.2.min.js
+      jquery-1.11.1.0.min.js
       modernizr-2.6.2.min.js
-| less/
-    _buttons.less
-    _forms.less
-    _layout.less
-    _mixins.less
-    _menus.less
-    _reset.less
-    _type.less
-    _variables.less
-    base.less (compiles)
-    desktop.less (compiles)
-    mobile.less (compiles)
-    tablet.less (compiles)
+| scss/
+    _buttons.scss
+    _forms.scss
+    _layout.scss
+    _mixins.scss
+    _menus.scss
+    _reset.scss
+    _type.scss
+    _variables.scss
+    base.scss
+    desktop.scss
+    mobile.scss
+    tablet.scss
+    styles.scss (compiles)
 ```
 
 **To note:**
-* Files prefixed with ‘_’ do not directly compile.
+* Files prefixed with ‘_’ do not directly compile by default.
+* The Gulp file is set to compile the included base/desktop/tablet/mobile scss files into a single styles.css
 * The latest versions of jQuery and Modernizr are included for convenience.
 * Base supports all major modern browsers and IE7+.
 
-## Compiling LESS
+## Compiling SCSS
 
-Base requires a [LESS CSS](http://lesscss.org/) compiler to work its magic. This can be done with [Grunt](http://gruntjs.com/) *(instructions below)* or one of these third-party GUI tools:
+Base requires a [SCSS CSS](http://lesscss.org/) compiler to work its magic. This can be done with [Gulp](http://gulpjs.com/) *(instructions below)* or one of these third-party GUI tools:
 
-* [Codekit (OS X)](http://incident57.com/codekit/)
-* [Simpleless (Windows & OS X)](http://wearekiss.com/simpless)
+* [Codekit (OSX)](http://incident57.com/codekit/)
+* [Adobe Brackets (OSX and Windows)](http://brackets.io/)
 
-### Compiling with Grunt
+### Compiling with Gulp
 
-[Grunt](http://gruntjs.com/) is an automated Javascript task-runner installed and managed by [npm](https://npmjs.org/) (the Node.js package manager). If you're unfamiliar with `npm` you can install it from the [Node.js website](http://nodejs.org/download/).
+[Gulp](http://gulpjs.com/) is an automated Javascript task-runner installed and managed by [npm](https://npmjs.org/) (the Node.js package manager). If you're unfamiliar with `npm` you can install it from the [Node.js website](http://nodejs.org/download/).
+
+The GulpFile.js includes: [BrowserSync](http://www.browsersync.io/docs/gulp/) to preview your site instantaneously in your browser, and across devices, as you are developing; and a javascript uglify / minify task that can be invoked from the command line using `gulp uglify`.
 
 **In the command line**
 
-1. Install `grunt-cli` with `npm install -g grunt-cli`
+1. Install `gulp-cli` with `npm install -g gulp-cli`
 2. Navigate to your Base install and run `npm install` to load dependencies.
-3. Run `grunt dev` to start watching and compiling the 4 main `.less` files.
+3. Run `gulp dev` to start watching all `.scss` files for changes and compiling the `styles.scss` file.
 
 ## Using Base
 
-Base is easiest to learn by playing with the code. The default `index.html` file contains a quick reference for the reset and grid mixins. For more detail view the **[Base Wiki](https://github.com/agency/base/wiki)**.
-
-## Bugs & Feature Requests
-
-If you find bugs or have any feature requests please [open a new issue](https://github.com/agency/base/issues). It helps if you’re clear about how to reproduce the issue, and what might be causing it.
-
-## Contributing
-
-Pull requests are very welcome. Please follow the same coding style already set within the Base files and keep commits as clean as possible with a detailed explanation of what your pull request is doing.
-
-Base is maintained through the `master` branch, bundled into releases as required. Experimental or major features will split out into separate branches.
+Base is easiest to learn by playing with the code. The default `index.html` file contains a quick reference for information on the baseline grid, typography and the grid mixins.
 
 ## Authors & Key Contributors
 
 * [Tom Maitland](http://tommaitland.net) / [@tommaitland](https://twitter.com/tommaitland)
 * [Scott Sanders](https://twitter.com/scottsanders)
 * [Murray Bunton](http://murraybunton.com/) / [@murraybunton](https://twitter.com/murraybunton)
+* [Rob Thwaites](http://robthwaites.com/)
 
 ## Copyright
 
-Copyright 2013 [Agency Strategic Creative](http://agency.sc/) under the [Apache 2.0 license](https://github.com/agency/base/blob/master/LICENSE).
+Copyright 2015 [Agency Strategic Creative](http://agency.sc/) under the [Apache 2.0 license](https://github.com/agency/base/blob/master/LICENSE).

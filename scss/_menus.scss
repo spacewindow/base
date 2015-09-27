@@ -7,7 +7,7 @@
 // -------------------
 
 ul[class*="menu-"] {
-	margin: 1em 0;
+	margin: 1rem 0;
 	padding: 0;
 
 	li {
@@ -15,22 +15,22 @@ ul[class*="menu-"] {
 		list-style: none;
 
 		a {
-			padding: 0.75em 1.25em;
+			padding: 0.75rem 1.25rem;
 			line-height: 100%;
-			color: $textColor;
+			color: $black;
 			text-decoration: none;
 		}
 		&:hover > a,
 		a:hover,
 		a.selected,
 		&.selected a { 
-			background: $baseColor;
+			background: $lightgrey;
 		}
 
 		a:active,
 		a.selected:hover,
 		&.selected a:hover { 
-			background: darken($baseColor, 3%);
+			background: darken($lightgrey, 3%);
 		}
 	}
 }
@@ -48,9 +48,9 @@ ul.menu-primary {
 			margin: 0;
 			padding: 0;
 			position: absolute;
-			top: 2.25em;
+			top: 2.25rem;
 			left: 0;
-			border: 1px solid $baseColor;
+			border: 1px solid $lightgrey;
 			background: white;
 			z-index: 1000;
 
@@ -71,7 +71,7 @@ ul.menu-primary {
 }
 
 ul.menu-secondary {
-	border: 1px solid $baseColor;
+	border: 1px solid $lightgrey;
 
 	li {
 		display: block;

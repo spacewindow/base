@@ -19,23 +19,13 @@ html {
 	margin: 0 auto;
 }
 
-header {
-	@include column(12);
-}
-
 article {
-	@include column(4);
-}
-
-aside {
-	@include column(4);
-}
-
-footer {
-	@include column(6, 6);
+	@include column(12);
 }
 
 // for development use only - comment out for production
 
+@import "_test";
 @import "_guides";
+
 
