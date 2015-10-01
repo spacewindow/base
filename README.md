@@ -1,9 +1,19 @@
-[Base [Sass Version] 1.0.2](http://base.gs/)
+[Base [Sass Version w. Baseline] 1.0.2](http://base.gs/)
 ======
 
 **Base is a semantic, lightweight and extensible framework to power the next generation of responsive websites.**
 
 It's created and maintained by the team at [@agencysc](https://twitter.com/agencysc). This version forked and modified by [Rob Thwaites](http://robthwaites.com).
+
+## This version
+
+This is one of a few forks of Base, originally built with LESS, which has been ported to use with SASS/SCSS, with the necessary modifications to mixins to accomodate this.
+
+It also shifts the central orgnanising unit for responsive typography from `font-size / ems` to a baseline measure defined in the `rem`s for each device. The system is a slight reversal of Mueller-Brockman's original system – determining the `gutterWidth` of your column structure determines the height of the baseline. The height of the baseline is then attributed to the `rem` unit for the device.
+
+The vertical and horizontal rhythm in your design are therefore fundamentally connected, for unified typographic spacing and design. This relationship can be easily overwritten for each device if necessary.
+
+The reponsive strategy is initially to determine your spacing and sizing of elements (block height / line-height / padding / margin) in `base.scss` in terms of `rems`. Now you can watch the responsive magic happen for each device, while keeping carefully considered sizing according to a baseline grid at various device sizes.
 
 ## Get Started
 
@@ -45,7 +55,7 @@ When you download Base you'll see a boilerplate `index.html` file and a folder s
 
 ## Compiling SCSS
 
-Base requires a [SCSS CSS](http://lesscss.org/) compiler to work its magic. This can be done with [Gulp](http://gulpjs.com/) *(instructions below)* or one of these third-party GUI tools:
+Base requires a [SCSS CSS](http://sass-lang.com/) compiler to work its magic. This can be done with [Gulp](http://gulpjs.com/) *(instructions below)* or one of these third-party GUI tools:
 
 * [Codekit (OSX)](http://incident57.com/codekit/)
 * [Adobe Brackets (OSX and Windows)](http://brackets.io/)
