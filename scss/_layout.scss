@@ -23,11 +23,7 @@ html {
 
 
 article{
-    @include column(9);
-}
-
-aside{
-    @include column(3);
+    @include column(12);
 }
 
 

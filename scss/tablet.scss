@@ -8,7 +8,7 @@
 
 $containerWidth: 768px;
 $columnCount:    12;
-$gutterRatio:    40%;
+$gutterRatio:    30%;
 
 @import "_variables"; // site variables
 @import "_mixins"; // grid and mixins
@@ -25,9 +25,5 @@ $gutterRatio:    40%;
 
 	// Custom Styles
 	// -------------------
-
-    p{
-        color: blue
-    }
 
 }

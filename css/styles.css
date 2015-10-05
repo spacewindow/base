@@ -53,7 +53,7 @@ table {
   border-spacing: 0; }
 
 html {
-  font-size: 24px; }
+  font-size: 25px; }
 
 .container {
   width: 1200px;
@@ -61,18 +61,12 @@ html {
 
 article {
   float: left;
-  width: 875px;
-  margin-left: 12.5px;
-  margin-right: 12.5px; }
-
-aside {
-  float: left;
-  width: 275px;
+  width: 1175px;
   margin-left: 12.5px;
   margin-right: 12.5px; }
 
 .baseline {
-  height: 24px; }
+  height: 25px; }
 
 .main-title {
   float: left;
@@ -246,7 +240,7 @@ body.guides {
     left: 0;
     z-index: 2;
     background-image: linear-gradient(to bottom, #ff9999 0, rgba(255, 255, 255, 0) 1px);
-    background-size: 100% 24px;
+    background-size: 100% 25px;
     pointer-events: none; }
   body.guides .container {
     position: relative;
@@ -317,8 +311,8 @@ h6 {
   margin-bottom: 0.5rem; }
 
 p {
-  font-size: 0.69rem;
-  line-height: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
   margin: 0.5rem 0 1rem; }
 
 a {
@@ -1967,9 +1961,6 @@ span.icon-twitter:before {
     visibility: visible;
     opacity: 1; }
 
-p {
-  color: black; }
-
 .group:after, .container:after {
   content: "";
   display: table;
@@ -1981,32 +1972,27 @@ p {
 /* BASELINE */
 @media (min-width: 980px) and (max-width: 1279px) {
   html {
-    font-size: 30px; }
+    font-size: 20px; }
   .container {
     width: 980px;
     margin: 0 auto; }
   article {
     float: left;
-    width: 710.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
-  aside {
-    float: left;
-    width: 220.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 959.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .baseline {
-    height: 30px; }
+    height: 20px; }
   .main-title {
     float: left;
-    width: 710.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 714.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .toggle {
     float: left;
-    width: 220.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px;
+    width: 224.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px;
     padding: 0;
     position: relative;
     margin-top: 0.5rem;
@@ -2023,114 +2009,114 @@ p {
     height: 2rem; }
   .one {
     float: left;
-    width: 57.16667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 61.25px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .two {
     float: left;
-    width: 138.83333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 142.91667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .three {
     float: left;
-    width: 220.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 224.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .four {
     float: left;
-    width: 302.16667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 306.25px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .five {
     float: left;
-    width: 383.83333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 387.91667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .six {
     float: left;
-    width: 465.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 469.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .seven {
     float: left;
-    width: 547.16667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 551.25px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .eight {
     float: left;
-    width: 628.83333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 632.91667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .nine {
     float: left;
-    width: 710.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 714.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .ten {
     float: left;
-    width: 792.16667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 796.25px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .eleven {
     float: left;
-    width: 873.83333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 877.91667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .twelve {
     float: left;
-    width: 955.5px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 959.58333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .one-point-five {
     float: left;
-    width: 98px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 102.08333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .two-point-five {
     float: left;
-    width: 179.66667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 183.75px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .three-point-five {
     float: left;
-    width: 261.33333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 265.41667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .four-point-five {
     float: left;
-    width: 343px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 347.08333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .five-point-five {
     float: left;
-    width: 424.66667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 428.75px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .six-point-five {
     float: left;
-    width: 506.33333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 510.41667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .seven-point-five {
     float: left;
-    width: 588px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 592.08333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .eight-point-five {
     float: left;
-    width: 669.66667px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 673.75px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .nine-point-five {
     float: left;
-    width: 751.33333px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 755.41667px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   .ten-point-five {
     float: left;
-    width: 833px;
-    margin-left: 12.25px;
-    margin-right: 12.25px; }
+    width: 837.08333px;
+    margin-left: 10.20833px;
+    margin-right: 10.20833px; }
   /* GUIDES - for development utility only */
   body.guides {
     position: relative; }
@@ -2144,7 +2130,7 @@ p {
       left: 0;
       z-index: 2;
       background-image: linear-gradient(to bottom, #ff9999 0, rgba(255, 255, 255, 0) 1px);
-      background-size: 100% 30px;
+      background-size: 100% 20px;
       pointer-events: none; }
     body.guides .container {
       position: relative;
@@ -2157,16 +2143,12 @@ p {
         bottom: 0;
         left: 0;
         z-index: 2;
-        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0) 0px, rgba(255, 0, 0, 0) 24.5px, rgba(255, 0, 0, 0.2) 25.5px, rgba(255, 0, 0, 0.2) 81.66667px);
-        background-position: -12.25px;
+        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0) 0px, rgba(255, 0, 0, 0) 20.41667px, rgba(255, 0, 0, 0.2) 21.41667px, rgba(255, 0, 0, 0.2) 81.66667px);
+        background-position: -10.20833px;
         pointer-events: none; } }
     @media (min-width: 980px) and (max-width: 1279px) and (max-width: 767px) {
       body.guides .container:before {
         display: none; } }
-
-@media (min-width: 980px) and (max-width: 1279px) {
-  p {
-    color: red; } }
 
 .group:after, .container:after {
   content: "";
@@ -2178,32 +2160,27 @@ p {
 
 @media (min-width: 768px) and (max-width: 979px) {
   html {
-    font-size: 26px; }
+    font-size: 19px; }
   .container {
     width: 768px;
     margin: 0 auto; }
   article {
     float: left;
-    width: 550.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
-  aside {
-    float: left;
-    width: 166.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 748.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .baseline {
-    height: 26px; }
+    height: 19px; }
   .main-title {
     float: left;
-    width: 550.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 556.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .toggle {
     float: left;
-    width: 166.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px;
+    width: 172.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px;
     padding: 0;
     position: relative;
     margin-top: 0.5rem;
@@ -2220,114 +2197,114 @@ p {
     height: 2rem; }
   .one {
     float: left;
-    width: 38.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 44.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .two {
     float: left;
-    width: 102.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 108.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .three {
     float: left;
-    width: 166.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 172.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .four {
     float: left;
-    width: 230.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 236.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .five {
     float: left;
-    width: 294.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 300.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .six {
     float: left;
-    width: 358.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 364.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .seven {
     float: left;
-    width: 422.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 428.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .eight {
     float: left;
-    width: 486.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 492.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .nine {
     float: left;
-    width: 550.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 556.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .ten {
     float: left;
-    width: 614.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 620.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .eleven {
     float: left;
-    width: 678.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 684.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .twelve {
     float: left;
-    width: 742.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 748.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .one-point-five {
     float: left;
-    width: 70.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 76.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .two-point-five {
     float: left;
-    width: 134.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 140.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .three-point-five {
     float: left;
-    width: 198.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 204.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .four-point-five {
     float: left;
-    width: 262.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 268.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .five-point-five {
     float: left;
-    width: 326.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 332.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .six-point-five {
     float: left;
-    width: 390.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 396.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .seven-point-five {
     float: left;
-    width: 454.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 460.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .eight-point-five {
     float: left;
-    width: 518.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 524.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .nine-point-five {
     float: left;
-    width: 582.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 588.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   .ten-point-five {
     float: left;
-    width: 646.4px;
-    margin-left: 12.8px;
-    margin-right: 12.8px; }
+    width: 652.8px;
+    margin-left: 9.6px;
+    margin-right: 9.6px; }
   /* GUIDES - for development utility only */
   body.guides {
     position: relative; }
@@ -2341,7 +2318,7 @@ p {
       left: 0;
       z-index: 2;
       background-image: linear-gradient(to bottom, #ff9999 0, rgba(255, 255, 255, 0) 1px);
-      background-size: 100% 26px;
+      background-size: 100% 19px;
       pointer-events: none; }
     body.guides .container {
       position: relative;
@@ -2354,16 +2331,12 @@ p {
         bottom: 0;
         left: 0;
         z-index: 2;
-        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0) 0px, rgba(255, 0, 0, 0) 25.6px, rgba(255, 0, 0, 0.2) 26.6px, rgba(255, 0, 0, 0.2) 64px);
-        background-position: -12.8px;
+        background-image: repeating-linear-gradient(90deg, rgba(255, 0, 0, 0) 0px, rgba(255, 0, 0, 0) 19.2px, rgba(255, 0, 0, 0.2) 20.2px, rgba(255, 0, 0, 0.2) 64px);
+        background-position: -9.6px;
         pointer-events: none; } }
     @media (min-width: 768px) and (max-width: 979px) and (max-width: 767px) {
       body.guides .container:before {
         display: none; } }
-
-@media (min-width: 768px) and (max-width: 979px) {
-  p {
-    color: blue; } }
 
 .group:after, .container:after {
   content: "";
@@ -2375,7 +2348,7 @@ p {
 
 @media (max-width: 767px) {
   html {
-    font-size: 20px; }
+    font-size: 18px; }
   .container {
     width: 100%;
     margin: 0 auto; }
@@ -2384,13 +2357,8 @@ p {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%; }
-  aside {
-    float: left;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%; }
   .baseline {
-    height: 20px; }
+    height: 18px; }
   .main-title {
     float: left;
     width: 90%;
@@ -2538,7 +2506,7 @@ p {
       left: 0;
       z-index: 2;
       background-image: linear-gradient(to bottom, #ff9999 0, rgba(255, 255, 255, 0) 1px);
-      background-size: 100% 20px;
+      background-size: 100% 18px;
       pointer-events: none; }
     body.guides .container {
       position: relative;
@@ -2557,9 +2525,5 @@ p {
     @media (max-width: 767px) and (max-width: 767px) {
       body.guides .container:before {
         display: none; } }
-
-@media (max-width: 767px) {
-  p {
-    color: green; } }
 
 /*# sourceMappingURL=/styles.css.map */
