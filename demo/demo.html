@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Base</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="main-title">
+            <h1>Base framework</h1>
+        </div>
+
+        <div class="toggle">
+            <button class="primary">Show Guides</button>
+        </div>
+
+        <article class="components" id="components">
+
+            <h2>The responsive strategy</h2>
+
+            <p>The goal of Base is to be able to design your layout <em>once</em>, then have that design automatically resize for different device sizes, while retaining clean vertical and horizontal spacing and visual rhythm.</p>
+
+            <p>The Base reponsive framework means that you design for a desktop layout, then watch your design automatically resize for smaller screens, tablet and mobile.</p>
+
+            <p>Site layouts using Base are best developed using the Chrome browser (though see note on Firefox below).</p>
+
+            <p>Copy the entire Base framework to your project folder and modify anything as needed (except perhaps the _mixins.scss file). No CSS overriding should be necessary, you have full style control from the ground up.</p>
+
+            <h3>Step 1: Set your baseline height</h3>
+            <h4>The current baseline height is: <span class="bline"></span></h4>
+
+            <p>To create visual harmony for your design, a baseline measure is established at the deisgn phase for vertical and horizontal rhythm. It serves as the basis for <em>all</em> spacing and sizing for your design.</p>
+
+            <p>The baseline height is set by:</p>
+
+            <ul>
+                <li>Adjusting the $gutterWidth variable in base.scss / desktop.scss / table.scss sup</li>
+                <li>By default the $baseline variable is the same as the $gutterwidth value, to create a linked vertical and horizontal rhythm. This baseline value is applied to the <html> font-size and established the rem size for that device.</li>
+                <li>If necessary, set the $baseline variable to make the baseline/ vertical spacing independent of the columns/ horizontal spacing. This is essntial for mobile, optional for the other devices.</li>
+
+            </ul>
+
+            <h3>Step 2: Set your typographic spacing and sizing in terms of rems in base.scss</h3>
+
+            <h4>1 rem = 1 baseline unit</h4>
+
+            <p>You should have worked out with your designer a mockup for the project, worked out your type heirarchy and possibly created the HTML DOM structure of your site before beginning the styling of those elements with the Base .scss files.</p>
+
+            <p><strong>Set all your main font-sizes, block sizes and spacing on elements in terms of rems</strong> The framework helps you design responsively, as you are no longer thinking in terms of pixel measurements which have to be adjusted from device to device. <a href="#typography">Use this page </a>to set your typography below.</p>
+            <p>You can use ems for responsive sizing, though from a design perspective, sizing everything from a clear baseline unit will give you more visually consistent results.</p>
+            <p>You no longer think in terms of pixels, as the pixels change from device to device. Create you layout once and watch your layout respond to device sizes automatically.</p>
+            <p>This single baseline value can be altered and adjusted at any point in the development process and automatically affect your whole design.</p>
+
+            <h3>Step 3: Set up your responsive columns layout in _layout.scss</h3>
+
+            <p>_layout.scss processes your column widths and offset for each device width. Columns can be declared with whole or 0.5 widths if that is helpful to you. See the examples <a href="examples">below</a>.</p>
+
+            <p>Note: the _guides.scss file and _test.scss files imported into this file are only for use with this page, and are useful for your initial type configuration. Remove when no longer needed.</p>
+<pre>
+
+// A 4-column-wide &lt;div&gt;, offset by 2 column left margin.
+
+div{
+    @include column(2,4);
+
+}</pre>
+           <p>Once you have done this, check your design in Firefox. Gecko browsers renders sub-pixels differently to Webkit and Blink browsers, you may need to slightly adjust your $gutterWidth percentage so the layout works cross-platform.</p>
+
+            <h3>Step 4: style your layout in base.scss</h3>
+
+            <p>All styling of elements can be done in this file. You may need to wokr between base.scss and _layout.scss as you layout your page.</p>
+
+            <h3>Step 5: adjust for devices in .scss stylesheets</h3>
+
+            <p>Override properties in elements for specific particular devices by applying styles in desktop.scss / tablet.scss / mobile.scss</p>
+
+            <h2>Using this page</h2>
+
+            <h3>Guides</h3>
+
+            <p>Simply add <code>&lt;body class="guides"&gt;</body></code> to your HTML page to view the baseline and column guides overlay. This has limited use as the sub-pixel rendering of browsers means that the baseline is not completely accurate.</p>
+
+            <h3>Helper elements</h3>
+
+            <p>This page helps you prepare your type heirarchy and sizing in terms of rems. Once you have set up these styles up, you can remove this page from your project, including the helper elements: _test.scss, demo.js, _guides.scss (though you may wish to keep _guides.scss if you find it helpful for working on your layout.</p>
+
+            <h3 id="typography">Typography</h3>
+
+            <h4>Premise</h4>
+
+            <p>Font-sizes are best set in rems, in order to resize responsively and automatically for all device sizes. (You can still set in pixels or ems if you wish).</p>
+
+            <p>As you design may have font-sizes determined in pixels, use this page to determine how that pixel value is set in rems.</p>
+
+            <h4>.scss files</h4>
+
+            <p>The typography CSS is broken into separate files in this initial setup – _type.scss, _buttons.scss, _forms.scss, _menus.scss, _fonts.scss, _tooltips.scss – and imported into base.scss. These styles could simply be copied directly into base.scss and reorganised – do whatever is easiest for you.</p>
+
+            <h4>Examples</h4>
+
+            <div class="typography">
+
+                <h1>Heading 1 <span></span></h1>
+                <h2>Heading 2 <span></span></h2>
+                <h3>Heading 3 <span></span></h3>
+                <h4>Heading 4 <span></span></h4>
+                <h5>Heading 5 <span></span></h5>
+                <h6>Heading 6 <span></span></h6>
+
+                <p>Paragraph <span></span></p>
+
+                <ul>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+
+                    <span></span></ul>
+
+                <ol>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+                    <li>List Item <span></span></li>
+
+                </ol>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Description</td>
+                            <td>Value</td>
+                        </tr>
+
+                        <tr>
+                            <td>Description</td>
+                            <td>Value</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>Value</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+
+            <h3 class="split-header"><span>Components</span></h3>
+
+            <p class="subline">Base includes a lightweight CSS framework to get you started quickly. You can change it, you'll never need to override it.</p>
+
+            <div class="component">
+                <h4>Buttons <em>(_buttons.scss)</em></h4>
+                <button>.button</button>
+                <button class="disabled">.button.disabled</button>
+                <br>
+                <button class="primary">.button-primary</button>
+                <button class="primary disabled">.button-primary.disabled</button>
+                <br>
+                <button class="secondary">.button-secondary</button>
+                <button class="secondary disabled">.button-secondary.disabled</button>
+            </div>
+
+            <div class="component">
+                <h4>Forms <em>(_forms.scss)</em></h4>
+                <p>All HTML5 form elements are normalized to a set of core styles. Again, you can simply change the styles as needed.</p>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+
+            <div class="component">
+                <h4>Mixins <em>(_mixins.scss)</em></h4>
+                <p>Base includes SCSS mixins for CSS3 properties, animations, gradients and some utility mixins. Check the source to see what's available.</p>
+            </div>
+
+            <div class="component">
+                <h4>Menus <em>(_menus.scss)</em></h4>
+                <p>Add <code>.menu-primary</code> for a horizontal menu or <code>.menu-secondary</code> for a vertical menu.</p>
+                <h4>.menu-primary</h4>
+                <nav>
+                    <ul class="menu-primary">
+                        <li class="selected"><a href="#">Home</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Dropdown</a>
+                            <ul>
+                                <li><a href="#">Subpage Item</a></li>
+                                <li><a href="#">Subpage Item</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <h4>.menu-secondary</h4>
+                <nav>
+                    <ul class="menu-secondary">
+                        <li class="selected"><a href="#">Home</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Dropdown</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="component">
+                <h4>Variables <em>(_variables.scss)</em></h4>
+                <p>Add brand colors and font-stacks to SASS variables to easily control fonts and colors across yor site. Contains some examples to begin with.</p>
+                <ul>
+                    <li>Heading font-family - <em>@headingFont</em></li>
+                    <li>Paragraph font-family - <em>@paragraphFont</em></li>
+                </ul>
+            </div>
+
+        </article>
+
+
+    </div>
+
+    <div class="container" id="examples">
+
+        <header>
+            <h3>Column examples</h3>
+            <p>Columns are generally set as whole numbers, though setting widths with 0.5 values is also possible.</p>
+        </header>
+
+        <div class="rows one">1</div>
+        <div class="rows two">2</div>
+        <div class="rows three">3</div>
+        <div class="rows four">4</div>
+        <div class="rows five">5</div>
+        <div class="rows six">6</div>
+        <div class="rows seven">7</div>
+        <div class="rows eight">8</div>
+        <div class="rows nine">9</div>
+        <div class="rows ten">10</div>
+
+        <div class="rows one-point-five">1.5</div>
+        <div class="rows two-point-five">2.5</div>
+        <div class="rows three-point-five">3.5</div>
+        <div class="rows four-point-five">4.5</div>
+        <div class="rows five-point-five">5.5</div>
+        <div class="rows six-point-five">6.5</div>
+        <div class="rows seven-point-five">7.5</div>
+        <div class="rows eight-point-five">8.5</div>
+        <div class="rows nine-point-five">9.5</div>
+        <div class="rows ten-point-five">10.5</div>
+    </div>
+
+    <script src="../js/vendor/jquery-1.11.0.min.js"></script>
+
+    <script src="demo.js"></script>
+
+</body>
+
+</html>

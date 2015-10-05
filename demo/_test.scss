@@ -1,3 +1,22 @@
+.baseline{
+    height: $remHeight;
+}
+
+.main-title{
+    @include column(9);
+}
+
+.toggle{
+    @include column(3);
+    padding: 0;
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    button{
+        width: 100%;
+    }
+}
+
 div.rows{
 //    border: 0.5rem solid black;
     color: black;
@@ -8,19 +27,6 @@ div.rows{
     font-size: 0.6rem;
     height: 2rem;
 //    line-height: 2rem;
-}
-
-.main-title{
-    @include column(9);
-}
-
-.toggle{
-    @include column(3);
-    padding: 0;
-}
-
-header{
-    @include column(12);
 }
 
 .one {

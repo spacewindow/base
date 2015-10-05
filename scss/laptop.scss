@@ -1,31 +1,35 @@
 //
-// Responsive CSS File - Large Desktops ~1280px
+// Responsive CSS File - Smaller Laptop Screens ~980px
 // --------------------------------------------------
 
 
 // Grid and Type Variables
 // -------------------
 
-$containerWidth: 1280px;
+$containerWidth: 980px;
 $columnCount:    12;
-$gutterRatio:    25%;
+$gutterRatio:    30%;
 
 @import "_variables"; // site variables
 @import "_mixins"; // grid and mixins
 
 /* BASELINE */
 
-// $baseline by default is the gutterWidth. Alternatively, override with a pixel value below.
+// $remHeight by default is the gutterWidth. Alternatively, override with a pixel value below.
 
-// $baseline: 30px;
+ $remHeight: 30px;
 
 // -------------------
 
-@media (min-width: 1280px) {
+@media (min-width: 980px) and (max-width: 1279px) {
 
 	@import "_layout";
 
 	// Custom Styles
 	// -------------------
+
+    p{
+        color: red;
+    }
 
 }

@@ -1,20 +1,20 @@
 //
-// Base CSS File - Standard Desktops & CSS Default ~960px
+// Base CSS File - Large Desktops & CSS Default ~1280px
 // --------------------------------------------------
 
 // Grid and Type Variables
 // -------------------
 
-$containerWidth: 980px;
-$columnCount:    12; 
-$gutterRatio:    30%;
+$containerWidth: 1200px;
+$columnCount:    12;
+$gutterRatio:    25%;
 
 @import "_variables";
 @import "_mixins";
 
-// $baseline by default is the gutterWidth. Alternatively, override with a pixel value...
+// $remHeight by default is the gutterWidth. Alternatively, override with a pixel value...
 
-// $baseline: 20px;
+ $remHeight: 24px;
 
 // -------------------
 
@@ -25,9 +25,13 @@ $gutterRatio:    30%;
 @import "_buttons";
 @import "_menus";
 @import "_fonts";
-//@import "_tooltips";
+@import "_tooltips";
 
 
 // Custom Styles
 // -------------------
+
+p{
+    color: black;
+}
 

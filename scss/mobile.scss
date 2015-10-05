@@ -8,14 +8,14 @@
 
 $containerWidth: 100%;
 $columnCount:    1;
-$gutterRatio:    5%;
+$gutterRatio:    10%;
 
 @import "_variables"; // site variables
 @import "_mixins"; // grid and mixins
 
-// $baseline by default is the gutterWidth. Alternatively, override with a pixel value...
+// $remHeight by default is the gutterWidth. Alternatively, override with a pixel value...
 
- $baseline: 20px;
+ $remHeight: 20px;
 
 // -------------------
 
@@ -26,5 +26,9 @@ $gutterRatio:    5%;
 
 	// Custom Styles
 	// -------------------
+
+    p{
+        color: green;
+    }
 
 }

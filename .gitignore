@@ -15,3 +15,6 @@ node_modules
 npm-debug.log
 /documentation/
 /css/styles.css.map
+/1-demo-rems.html
+/2-demo-devices.html
+/3-demo-columns.html

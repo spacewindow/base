@@ -7,10 +7,10 @@
 // Device agnostic layout styles. Construct the grid and box models here.
 // -------------------
 
-// $baseline is the basis for rems
+// $remHeight is the base size for rems.
 
 html {
-	font-size: $baseline;
+	font-size: $remHeight;
 }
 
 .container { // kept for utility
@@ -19,13 +19,21 @@ html {
 	margin: 0 auto;
 }
 
-article {
-	@include column(12);
+// define your columns here, example below
+
+
+article{
+    @include column(9);
 }
+
+aside{
+    @include column(3);
+}
+
 
 // for development use only - comment out for production
 
-@import "_test";
-@import "_guides";
+@import "../demo/_test";
+@import "../demo/_guides";
 
 

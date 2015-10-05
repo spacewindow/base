@@ -385,7 +385,7 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnSize;
     box-sizing: border-box;
 }
 
-// Create a $baseline variable, calculated in pixels equal to the gutterWidth.
+// Create a $remHeight variable, calculated in pixels equal to the gutterWidth.
 
 // Useful for horizontal spacing and vertical rhythm, with a fallback of 15px.
 
@@ -400,6 +400,6 @@ $gutterWidth: ($containerWidth / $columnCount) - $columnSize;
     @return stripUnits($columnSize)*1px
 }
 
-$baseline: round(gutterwidth());
+$remHeight: round(gutterwidth());
 $columnwidth: columnwidth();
 $gutter: gutterwidth();
