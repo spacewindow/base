@@ -17,6 +17,8 @@ html {
 	@include container();
     @extend .group;
 	margin: 0 auto;
+    position: relative;
+    overflow: auto; // could be hidden if necessary
 }
 
 // define your columns here, example below
